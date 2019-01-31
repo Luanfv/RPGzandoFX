@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="300.0" minWidth="371.0" prefHeight="400.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
+   <children>
+      <Button fx:id="btnGnomoFloresta" layoutX="153.0" layoutY="128.0" mnemonicParsing="false" onAction="#onBtGnomoFlorestaAction" prefHeight="25.0" prefWidth="120.0" text="Gnomo da Floresta" />
+      <Button fx:id="btnHumano" layoutX="153.0" layoutY="44.0" mnemonicParsing="false" onAction="#onBtHumanoAction" prefHeight="25.0" prefWidth="120.0" text="Humano" />
+      <Button fx:id="btnElfoAlto" layoutX="14.0" layoutY="226.0" mnemonicParsing="false" onAction="#onBtElfoAltoAction" prefHeight="25.0" prefWidth="120.0" text="Elfo Alto" />
+      <Button fx:id="btnDraconato" layoutX="14.0" layoutY="154.0" mnemonicParsing="false" onAction="#onBtDraconatoAction" prefHeight="25.0" prefWidth="120.0" text="Draconato" />
+      <Button fx:id="btnHalflingLeve" layoutX="153.0" layoutY="265.0" mnemonicParsing="false" onAction="#onBtHalflingLeveAction" prefHeight="25.0" prefWidth="120.0" text="Halfling Pés Leves" />
+      <Label layoutX="324.0" layoutY="252.0" text="SUA RAÇA">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRacaEscolha" layoutX="317.0" layoutY="30.0" prefHeight="27.0" prefWidth="188.0" textFill="#f80b0b">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAnaoColina" layoutX="14.0" layoutY="44.0" mnemonicParsing="false" onAction="#onBtAnaoColinaAction" prefHeight="25.0" prefWidth="120.0" text="Anão da Colina" />
+      <Label layoutX="18.0" layoutY="16.0" prefHeight="17.0" prefWidth="98.0" text="ANÃO">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAnaoMontanha" layoutX="14.0" layoutY="76.0" mnemonicParsing="false" onAction="#onBtAnaoMontanhaAction" prefHeight="25.0" prefWidth="120.0" text="Anão da Montanha" />
+      <Label layoutX="14.0" layoutY="127.0" prefHeight="27.0" prefWidth="115.0" text="DRACONATO">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="199.0" prefHeight="27.0" prefWidth="115.0" text="ELFO">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="157.0" layoutY="16.0" prefHeight="17.0" prefWidth="98.0" text="HUMANO">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="157.0" layoutY="101.0" prefHeight="17.0" prefWidth="98.0" text="GNOMO">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnGnomoPedra" layoutX="153.0" layoutY="161.0" mnemonicParsing="false" onAction="#onBtGnomoPedraAction" prefHeight="25.0" prefWidth="120.0" text="Gnomo da Pedra" />
+      <Label layoutX="157.0" layoutY="225.0" prefHeight="17.0" prefWidth="98.0" text="HALFLING">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnHalflingRobusto" layoutX="153.0" layoutY="301.0" mnemonicParsing="false" onAction="#onBtHalflingRobustoAction" prefHeight="25.0" prefWidth="120.0" text="Halfling Robusto" />
+      <Button fx:id="btnElfoFloresta" layoutX="14.0" layoutY="265.0" mnemonicParsing="false" onAction="#onBtElfoFlorestaAction" prefHeight="25.0" prefWidth="120.0" text="Elfo da Floresta" />
+      <Button fx:id="btnElfoNegro" layoutX="14.0" layoutY="301.0" mnemonicParsing="false" onAction="#onBtElfoNegroAction" prefHeight="25.0" prefWidth="120.0" text="Elfo Negro" />
+      <Label fx:id="lblInfo1" layoutX="324.0" layoutY="59.0" prefHeight="20.0" prefWidth="120.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInfo2" layoutX="324.0" layoutY="79.0" prefHeight="20.0" prefWidth="120.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInfo3" layoutX="324.0" layoutY="99.0" prefHeight="20.0" prefWidth="120.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInfo4" layoutX="324.0" layoutY="118.0" prefHeight="20.0" prefWidth="120.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInfo5" layoutX="324.0" layoutY="138.0" prefHeight="20.0" prefWidth="120.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInfo6" layoutX="324.0" layoutY="157.0" prefHeight="20.0" prefWidth="120.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
