@@ -1,92 +1,264 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="300.0" minWidth="371.0" prefHeight="400.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
+<AnchorPane minHeight="300.0" minWidth="371.0" prefHeight="554.0" prefWidth="961.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
    <children>
-      <Button fx:id="btnGnomoFloresta" layoutX="153.0" layoutY="128.0" mnemonicParsing="false" onAction="#onBtGnomoFlorestaAction" prefHeight="25.0" prefWidth="120.0" text="Gnomo da Floresta" />
-      <Button fx:id="btnHumano" layoutX="153.0" layoutY="44.0" mnemonicParsing="false" onAction="#onBtHumanoAction" prefHeight="25.0" prefWidth="120.0" text="Humano" />
-      <Button fx:id="btnElfoAlto" layoutX="14.0" layoutY="226.0" mnemonicParsing="false" onAction="#onBtElfoAltoAction" prefHeight="25.0" prefWidth="120.0" text="Elfo Alto" />
-      <Button fx:id="btnDraconato" layoutX="14.0" layoutY="154.0" mnemonicParsing="false" onAction="#onBtDraconatoAction" prefHeight="25.0" prefWidth="120.0" text="Draconato" />
-      <Button fx:id="btnHalflingLeve" layoutX="153.0" layoutY="265.0" mnemonicParsing="false" onAction="#onBtHalflingLeveAction" prefHeight="25.0" prefWidth="120.0" text="Halfling Pés Leves" />
-      <Label layoutX="324.0" layoutY="252.0" text="SUA RAÇA">
+      <Label layoutX="663.0" layoutY="22.0" text="Atributos atuais" underline="true">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="lblRacaEscolha" layoutX="317.0" layoutY="30.0" prefHeight="27.0" prefWidth="188.0" textFill="#f80b0b">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnAnaoColina" layoutX="14.0" layoutY="44.0" mnemonicParsing="false" onAction="#onBtAnaoColinaAction" prefHeight="25.0" prefWidth="120.0" text="Anão da Colina" />
-      <Label layoutX="18.0" layoutY="16.0" prefHeight="17.0" prefWidth="98.0" text="ANÃO">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnAnaoMontanha" layoutX="14.0" layoutY="76.0" mnemonicParsing="false" onAction="#onBtAnaoMontanhaAction" prefHeight="25.0" prefWidth="120.0" text="Anão da Montanha" />
-      <Label layoutX="14.0" layoutY="127.0" prefHeight="27.0" prefWidth="115.0" text="DRACONATO">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="14.0" layoutY="199.0" prefHeight="27.0" prefWidth="115.0" text="ELFO">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="157.0" layoutY="16.0" prefHeight="17.0" prefWidth="98.0" text="HUMANO">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="157.0" layoutY="101.0" prefHeight="17.0" prefWidth="98.0" text="GNOMO">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnGnomoPedra" layoutX="153.0" layoutY="161.0" mnemonicParsing="false" onAction="#onBtGnomoPedraAction" prefHeight="25.0" prefWidth="120.0" text="Gnomo da Pedra" />
-      <Label layoutX="157.0" layoutY="225.0" prefHeight="17.0" prefWidth="98.0" text="HALFLING">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnHalflingRobusto" layoutX="153.0" layoutY="301.0" mnemonicParsing="false" onAction="#onBtHalflingRobustoAction" prefHeight="25.0" prefWidth="120.0" text="Halfling Robusto" />
-      <Button fx:id="btnElfoFloresta" layoutX="14.0" layoutY="265.0" mnemonicParsing="false" onAction="#onBtElfoFlorestaAction" prefHeight="25.0" prefWidth="120.0" text="Elfo da Floresta" />
-      <Button fx:id="btnElfoNegro" layoutX="14.0" layoutY="301.0" mnemonicParsing="false" onAction="#onBtElfoNegroAction" prefHeight="25.0" prefWidth="120.0" text="Elfo Negro" />
-      <Label fx:id="lblInfo1" layoutX="324.0" layoutY="59.0" prefHeight="20.0" prefWidth="120.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblInfo2" layoutX="324.0" layoutY="79.0" prefHeight="20.0" prefWidth="120.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblInfo3" layoutX="324.0" layoutY="99.0" prefHeight="20.0" prefWidth="120.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblInfo4" layoutX="324.0" layoutY="118.0" prefHeight="20.0" prefWidth="120.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblInfo5" layoutX="324.0" layoutY="138.0" prefHeight="20.0" prefWidth="120.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblInfo6" layoutX="324.0" layoutY="157.0" prefHeight="20.0" prefWidth="120.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
+      <Button fx:id="btnConfirmar" layoutX="445.0" layoutY="259.0" mnemonicParsing="false" onAction="#onBtConfirmarAction" text="CONFIRMAR" AnchorPane.leftAnchor="445.0">
+         <padding>
+            <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+         </padding>
+      </Button>
+      <GridPane layoutX="657.0" layoutY="59.0" prefHeight="182.0" prefWidth="85.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="FOR">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="DES" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="CON" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="INT" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="SAB" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="CAR" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFor" text="0" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDes" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCon" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblInt" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSab" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCar" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane layoutX="14.0" layoutY="19.0" prefHeight="120.0" prefWidth="150.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="163.0" text="ANÃO" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAnaoColina" mnemonicParsing="false" onAction="#onBtAnaoColinaAction" prefHeight="30.0" prefWidth="200.0" text="Anão da Colina" GridPane.rowIndex="1" />
+            <Button fx:id="btnAnaoMontanha" mnemonicParsing="false" onAction="#onBtAnaoMontanhaAction" prefHeight="30.0" prefWidth="200.0" text="Anão da Montanha" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="14.0" layoutY="303.0" prefHeight="88.0" prefWidth="150.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="102.0" minHeight="0.0" prefHeight="47.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="102.0" minHeight="0.0" prefHeight="55.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="173.0" text="HUMANO">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnHumano" mnemonicParsing="false" onAction="#onBtHumanoAction" prefHeight="30.0" prefWidth="200.0" text="Humano" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="190.0" layoutY="227.0" prefHeight="120.0" prefWidth="150.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="204.0" text="GNOMO">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnGnomoFloresta" mnemonicParsing="false" onAction="#onBtGnomoFlorestaAction" prefHeight="30.0" prefWidth="200.0" text="Gnomo da Floresta" GridPane.rowIndex="1" />
+            <Button fx:id="btnGnomoPedra" mnemonicParsing="false" onAction="#onBtGnomoPedraAction" prefHeight="30.0" prefWidth="200.0" text="Gnomo da Pedra" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="190.0" layoutY="101.0" prefHeight="120.0" prefWidth="150.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="194.0" text="HALFLING">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnHalflingLeve1" mnemonicParsing="false" onAction="#onBtHalflingLeveAction" prefHeight="30.0" prefWidth="200.0" text="Halfling Pés Leves" GridPane.rowIndex="1" />
+            <Button fx:id="btnHalflingRobusto1" mnemonicParsing="false" onAction="#onBtHalflingRobustoAction" prefHeight="30.0" prefWidth="200.0" text="Halfling Robusto" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="14.0" layoutY="142.0" prefHeight="158.0" prefWidth="150.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="153.0" text="ELFO">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnElfoAlto" mnemonicParsing="false" onAction="#onBtElfoAltoAction" prefHeight="30.0" prefWidth="200.0" text="Elfo Alto" GridPane.rowIndex="1" />
+            <Button fx:id="btnElfoFloresta" mnemonicParsing="false" onAction="#onBtElfoFlorestaAction" prefHeight="30.0" prefWidth="200.0" text="Elfo da Floresta" GridPane.rowIndex="2" />
+            <Button fx:id="btnElfoNegro" mnemonicParsing="false" onAction="#onBtElfoNegroAction" prefHeight="30.0" prefWidth="200.0" text="Elfo Negro" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="190.0" layoutY="15.0" prefHeight="88.0" prefWidth="150.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="102.0" minHeight="0.0" prefHeight="47.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="102.0" minHeight="0.0" prefHeight="55.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="200.0" text="DRACONATO">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnDraconato" mnemonicParsing="false" onAction="#onBtDraconatoAction" prefHeight="30.0" prefWidth="200.0" text="Draconato" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="413.0" layoutY="22.0" prefHeight="209.0" prefWidth="181.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblRacaEscolha" prefHeight="27.0" prefWidth="188.0" textFill="#f80b0b">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblInfo1" prefHeight="20.0" prefWidth="120.0" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblInfo2" prefHeight="20.0" prefWidth="120.0" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblInfo3" prefHeight="20.0" prefWidth="120.0" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblInfo4" prefHeight="20.0" prefWidth="120.0" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblInfo5" prefHeight="20.0" prefWidth="120.0" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblInfo6" prefHeight="20.0" prefWidth="120.0" GridPane.rowIndex="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
    </children>
 </AnchorPane>
