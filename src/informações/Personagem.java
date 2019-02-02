@@ -17,6 +17,8 @@ public final class Personagem extends PericiasPersonagem {
 		return nome;
 	}
 
-	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
 }

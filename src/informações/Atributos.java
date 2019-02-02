@@ -56,6 +56,9 @@ public abstract class Atributos {
 		this.carisma = carisma;
 	}
 
+	public void setNivel(int nivel) {
+		this.nivel = nivel;
+	}
 	
 	
 }

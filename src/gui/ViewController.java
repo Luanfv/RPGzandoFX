@@ -1,5 +1,7 @@
 package gui;
 
+import java.util.Random;
+
 import classes.Barbaro;
 import classes.Bardo;
 import classes.Bruxo;
@@ -30,6 +32,27 @@ import raça.HalflingRobusto;
 import raça.Humano;
 
 public class ViewController {
+	
+	@FXML
+	private Label lblProficiencia;
+
+	@FXML
+	private Label lblMFor;
+
+	@FXML
+	private Label lblMDes;
+
+	@FXML
+	private Label lblMCon;
+
+	@FXML
+	private Label lblMInt;
+
+	@FXML
+	private Label lblMSab;
+
+	@FXML
+	private Label lblMCar;
 
 	@FXML
 	private TextField txtFor;
@@ -459,9 +482,16 @@ public class ViewController {
 	@FXML
 	public void onBtConfirmarAction() {
 		try {
-			personagem.addAtributos(Integer.parseInt(txtFor.getText()), Integer.parseInt(txtDes.getText()),
-					Integer.parseInt(txtCon.getText()), Integer.parseInt(txtInt.getText()),
-					Integer.parseInt(txtSab.getText()), Integer.parseInt(txtCar.getText()));
+			personagem.setForca(Integer.parseInt(txtFor.getText()) + personagem.getRforca());
+			personagem.setDestreza(Integer.parseInt(txtDes.getText()) + personagem.getRdestreza());
+			personagem.setConstituicao(Integer.parseInt(txtCon.getText()) + personagem.getRconstituicao());
+			personagem.setInteligencia(Integer.parseInt(txtInt.getText()) + personagem.getRinteligencia());
+			personagem.setSabedoria(Integer.parseInt(txtSab.getText()) + personagem.getRsabedoria());
+			personagem.setCarisma(Integer.parseInt(txtCar.getText()) + personagem.getRcarisma());
+
+			personagem.att();
+			
+			lblProficiencia.setText(String.format("%d" , personagem.getProficiencia()));
 
 			lblFor.setText(String.format("%d", personagem.getForca()));
 			lblDes.setText(String.format("%d", personagem.getDestreza()));
@@ -470,10 +500,31 @@ public class ViewController {
 			lblSab.setText(String.format("%d", personagem.getSabedoria()));
 			lblCar.setText(String.format("%d", personagem.getCarisma()));
 
-			lblNome.setText(txtNome.getText());
-			lblNivel.setText(txtNivel.getText());
+			lblMFor.setText(personagem.getMforcalbl());
+			lblMDes.setText(personagem.getMdestrezalbl());
+			lblMCon.setText(personagem.getMconstituicaolbl());
+			lblMInt.setText(personagem.getMinteligencialbl());
+			lblMSab.setText(personagem.getMsabedorialbl());
+			lblMCar.setText(personagem.getMcarismalbl());
+
+			personagem.setNome(txtNome.getText());
+			personagem.setNivel(Integer.parseInt(txtNivel.getText()));
+
+			lblNome.setText(personagem.getNome());
+			lblNivel.setText(String.format("%d", personagem.getNivel()));
 			lblRaca.setText(personagem.getRacaNome());
 			lblClasse.setText(personagem.getClasseNome());
+
+			personagem.setHp(0);
+
+			for (int i = 0; i < personagem.getNivel(); i++) {
+				Random x = new Random();
+				int aleatorio = (x.nextInt(personagem.getVidaLvl()) + 1);
+				personagem.setHp(personagem.getHp() + (aleatorio + personagem.getMconstituicao()));
+			}
+
+			lblHp.setText(String.format("%d", personagem.getHp()));
+
 		} catch (Exception e) {
 			System.out.println("ERRO");
 		}

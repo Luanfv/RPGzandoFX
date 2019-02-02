@@ -72,7 +72,7 @@ public class ClassePersonagem extends RacaPersonagem {
 
 
 	public void setHp(int hp) {
-		this.hp += hp;
+		this.hp = hp;
 	}
 
 
