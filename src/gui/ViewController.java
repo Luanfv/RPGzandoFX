@@ -34,6 +34,33 @@ import raça.Humano;
 public class ViewController {
 	
 	@FXML
+	private Label lblInfoResistencia;
+	
+	@FXML
+	private Label lblVantagemResistencia1;
+	
+	@FXML
+	private Label lblVantagemResistencia2;
+	
+	@FXML
+	private Label lblResistenciaFor;
+
+	@FXML
+	private Label lblResistenciaDes;
+	
+	@FXML
+	private Label lblResistenciaCon;
+
+	@FXML
+	private Label lblResistenciaInt;
+
+	@FXML
+	private Label lblResistenciaSab;
+	
+	@FXML
+	private Label lblResistenciaCar;
+	
+	@FXML
 	private Label lblProficiencia;
 
 	@FXML
@@ -489,6 +516,9 @@ public class ViewController {
 			personagem.setSabedoria(Integer.parseInt(txtSab.getText()) + personagem.getRsabedoria());
 			personagem.setCarisma(Integer.parseInt(txtCar.getText()) + personagem.getRcarisma());
 
+			personagem.setNome(txtNome.getText());
+			personagem.setNivel(Integer.parseInt(txtNivel.getText()));
+			
 			personagem.att();
 			
 			lblProficiencia.setText(String.format("%d" , personagem.getProficiencia()));
@@ -506,9 +536,13 @@ public class ViewController {
 			lblMInt.setText(personagem.getMinteligencialbl());
 			lblMSab.setText(personagem.getMsabedorialbl());
 			lblMCar.setText(personagem.getMcarismalbl());
-
-			personagem.setNome(txtNome.getText());
-			personagem.setNivel(Integer.parseInt(txtNivel.getText()));
+			
+			lblResistenciaFor.setText(String.format("%d", personagem.getResistenciaForca()));
+			lblResistenciaDes.setText(String.format("%d", personagem.getResistenciaDestreza()));
+			lblResistenciaCon.setText(String.format("%d", personagem.getResistenciaConstituicao()));
+			lblResistenciaInt.setText(String.format("%d", personagem.getResistenciaInteligencia()));
+			lblResistenciaSab.setText(String.format("%d", personagem.getResistenciaSabedoria()));
+			lblResistenciaCar.setText(String.format("%d", personagem.getResistenciaCarisma()));
 
 			lblNome.setText(personagem.getNome());
 			lblNivel.setText(String.format("%d", personagem.getNivel()));
@@ -534,6 +568,9 @@ public class ViewController {
 	public void onBtBarbaroAction() {
 		Barbaro barbaro = new Barbaro();
 		lblClasseEscolha.setText("HP: 1D" + barbaro.getVidaLvl() + " por nivel");
+		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		lblVantagemResistencia1.setText("Força");
+		lblVantagemResistencia2.setText("Constituição");
 
 		personagem.addClasse(barbaro.getNome(), barbaro.getVidaLvl());
 	}
@@ -542,6 +579,9 @@ public class ViewController {
 	public void onBtBardoAction() {
 		Bardo bardo = new Bardo();
 		lblClasseEscolha.setText("HP: 1D" + bardo.getVidaLvl() + " por nivel");
+		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		lblVantagemResistencia1.setText("Destreza");
+		lblVantagemResistencia2.setText("Carisma");
 
 		personagem.addClasse(bardo.getNome(), bardo.getVidaLvl());
 	}
@@ -550,6 +590,9 @@ public class ViewController {
 	public void onBtBruxoAction() {
 		Bruxo bruxo = new Bruxo();
 		lblClasseEscolha.setText("HP: 1D" + bruxo.getVidaLvl() + " por nivel");
+		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		lblVantagemResistencia1.setText("Sabedoria");
+		lblVantagemResistencia2.setText("Carisma");
 
 		personagem.addClasse(bruxo.getNome(), bruxo.getVidaLvl());
 	}
@@ -558,6 +601,9 @@ public class ViewController {
 	public void onBtClerigoAction() {
 		Clerigo clerigo = new Clerigo();
 		lblClasseEscolha.setText("HP: 1D" + clerigo.getVidaLvl() + " por nivel");
+		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		lblVantagemResistencia1.setText("Sabedoria");
+		lblVantagemResistencia2.setText("Carisma");
 
 		personagem.addClasse(clerigo.getNome(), clerigo.getVidaLvl());
 	}
@@ -566,6 +612,9 @@ public class ViewController {
 	public void onBtDruidaAction() {
 		Druida druida = new Druida();
 		lblClasseEscolha.setText("HP: 1D" + druida.getVidaLvl() + " por nivel");
+		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		lblVantagemResistencia1.setText("Inteligencia");
+		lblVantagemResistencia2.setText("Sabedoria");
 
 		personagem.addClasse(druida.getNome(), druida.getVidaLvl());
 	}
@@ -574,6 +623,9 @@ public class ViewController {
 	public void onBtFeiticeiroAction() {
 		Feiticeiro feiticeiro = new Feiticeiro();
 		lblClasseEscolha.setText("HP: 1D" + feiticeiro.getVidaLvl() + " por nivel");
+		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		lblVantagemResistencia1.setText("Constituição");
+		lblVantagemResistencia2.setText("Carisma");
 
 		personagem.addClasse(feiticeiro.getNome(), feiticeiro.getVidaLvl());
 	}
@@ -582,6 +634,9 @@ public class ViewController {
 	public void onBtGuerreiroAction() {
 		Guerreiro guerreiro = new Guerreiro();
 		lblClasseEscolha.setText("HP: 1D" + guerreiro.getVidaLvl() + " por nivel");
+		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		lblVantagemResistencia1.setText("Força");
+		lblVantagemResistencia2.setText("Constituição");
 
 		personagem.addClasse(guerreiro.getNome(), guerreiro.getVidaLvl());
 	}
@@ -590,6 +645,9 @@ public class ViewController {
 	public void onBtLadinoAction() {
 		Ladino ladino = new Ladino();
 		lblClasseEscolha.setText("HP: 1D" + ladino.getVidaLvl() + " por nivel");
+		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		lblVantagemResistencia1.setText("Destreza");
+		lblVantagemResistencia2.setText("Inteligencia");
 
 		personagem.addClasse(ladino.getNome(), ladino.getVidaLvl());
 	}
@@ -598,6 +656,9 @@ public class ViewController {
 	public void onBtMagoAction() {
 		Mago mago = new Mago();
 		lblClasseEscolha.setText("HP: 1D" + mago.getVidaLvl() + " por nivel");
+		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		lblVantagemResistencia1.setText("Inteligencia");
+		lblVantagemResistencia2.setText("Sabedoria");
 
 		personagem.addClasse(mago.getNome(), mago.getVidaLvl());
 	}
@@ -606,6 +667,9 @@ public class ViewController {
 	public void onBtMongeAction() {
 		Monge monge = new Monge();
 		lblClasseEscolha.setText("HP: 1D" + monge.getVidaLvl() + " por nivel");
+		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		lblVantagemResistencia1.setText("Força");
+		lblVantagemResistencia2.setText("Destreza");
 
 		personagem.addClasse(monge.getNome(), monge.getVidaLvl());
 	}
@@ -614,6 +678,9 @@ public class ViewController {
 	public void onBtPaladinoAction() {
 		Paladino paladino = new Paladino();
 		lblClasseEscolha.setText("HP: 1D" + paladino.getVidaLvl() + " por nivel");
+		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		lblVantagemResistencia1.setText("Sabedoria");
+		lblVantagemResistencia2.setText("Carisma");
 
 		personagem.addClasse(paladino.getNome(), paladino.getVidaLvl());
 	}
@@ -622,6 +689,9 @@ public class ViewController {
 	public void onBtPatrulheiroAction() {
 		Patrulheiro patrulheiro = new Patrulheiro();
 		lblClasseEscolha.setText("HP: 1D" + patrulheiro.getVidaLvl() + " por nivel");
+		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		lblVantagemResistencia1.setText("Força");
+		lblVantagemResistencia2.setText("Destreza");
 
 		personagem.addClasse(patrulheiro.getNome(), patrulheiro.getVidaLvl());
 	}

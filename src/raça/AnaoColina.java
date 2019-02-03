@@ -20,5 +20,7 @@ public class AnaoColina extends Anao {
 	public String toString() {
 		return getNome() + "%nSAB: +" + (getSabedoria() + 1);
 	}
+	
+	
 
 }

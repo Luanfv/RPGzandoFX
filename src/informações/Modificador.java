@@ -203,8 +203,8 @@ public class Modificador extends ClassePersonagem {
 		return Mforca;
 	}
 
-	public void setMforca(int mforca) {
-		Mforca = mforca;
+	public void setMforca(int Mforca) {
+		this.Mforca = Mforca;
 	}
 
 	public int getMdestreza() {
