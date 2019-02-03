@@ -1,5 +1,6 @@
 package informações;
 
+
 public class PericiasPersonagem extends TesteDeResistencia {
 
 	private int acrobacia, arcanismo, atletismo, atuacao, blefar, furtividade, historia, intimidacao, intuicao,
@@ -7,6 +8,7 @@ public class PericiasPersonagem extends TesteDeResistencia {
 			sobrevivencia;
 
 	public void addPericias() {
+		addModificador();
 
 		acrobacia = getMdestreza();
 		arcanismo = getMinteligencia();
@@ -29,156 +31,150 @@ public class PericiasPersonagem extends TesteDeResistencia {
 
 		if (getPericia1() == "Acrobacia")
 			setAcrobacia(getProficiencia());
-		else if(getPericia1() == "Arcanismo")
+		else if (getPericia1() == "Arcanismo")
 			setArcanismo(getProficiencia());
-		else if(getPericia1() == "Atletismo")
+		else if (getPericia1() == "Atletismo")
 			setAtletismo(getProficiencia());
-		else if(getPericia1() == "Atuação")
+		else if (getPericia1() == "Atuação")
 			setAtuacao(getProficiencia());
-		else if(getPericia1() == "Blefar")
+		else if (getPericia1() == "Blefar")
 			setBlefar(getProficiencia());
-		else if(getPericia1() == "Furtividade")
+		else if (getPericia1() == "Furtividade")
 			setFurtividade(getProficiencia());
-		else if(getPericia1() == "Historia")
+		else if (getPericia1() == "Historia")
 			setHistoria(getProficiencia());
-		else if(getPericia1() == "Intimidação")
+		else if (getPericia1() == "Intimidação")
 			setIntimidacao(getProficiencia());
-		else if(getPericia1() == "Intuição")
+		else if (getPericia1() == "Intuição")
 			setIntuicao(getProficiencia());
-		else if(getPericia1() == "Investigação")
+		else if (getPericia1() == "Investigação")
 			setInvestigacao(getProficiencia());
-		else if(getPericia1() == "Lidar com animais")
+		else if (getPericia1() == "Lidar com animais")
 			setLidarAnimais(getProficiencia());
-		else if(getPericia1() == "Meidicina")
+		else if (getPericia1() == "Meidicina")
 			setMedicina(getProficiencia());
-		else if(getPericia1() == "Natureza")
+		else if (getPericia1() == "Natureza")
 			setNatureza(getProficiencia());
-		else if(getPericia1() == "Percepção")
+		else if (getPericia1() == "Percepção")
 			setPercepcao(getProficiencia());
-		else if(getPericia1() == "Persuasão")
+		else if (getPericia1() == "Persuasão")
 			setPersuasao(getProficiencia());
-		else if(getPericia1() == "Prestidigitação")
+		else if (getPericia1() == "Prestidigitação")
 			setPrestidigitacao(getProficiencia());
-		else if(getPericia1() == "Religião")
+		else if (getPericia1() == "Religião")
 			setReligiao(getProficiencia());
-		else if(getPericia1() == "Sobrevivencia")
+		else if (getPericia1() == "Sobrevivencia")
 			setSobrevivencia(getProficiencia());
-		
-		
-		
+
 		if (getPericia2() == "Acrobacia")
 			setAcrobacia(getProficiencia());
-		else if(getPericia2() == "Arcanismo")
+		else if (getPericia2() == "Arcanismo")
 			setArcanismo(getProficiencia());
-		else if(getPericia2() == "Atletismo")
+		else if (getPericia2() == "Atletismo")
 			setAtletismo(getProficiencia());
-		else if(getPericia2() == "Atuação")
+		else if (getPericia2() == "Atuação")
 			setAtuacao(getProficiencia());
-		else if(getPericia2() == "Blefar")
+		else if (getPericia2() == "Blefar")
 			setBlefar(getProficiencia());
-		else if(getPericia2() == "Furtividade")
+		else if (getPericia2() == "Furtividade")
 			setFurtividade(getProficiencia());
-		else if(getPericia2() == "Historia")
+		else if (getPericia2() == "Historia")
 			setHistoria(getProficiencia());
-		else if(getPericia2() == "Intimidação")
+		else if (getPericia2() == "Intimidação")
 			setIntimidacao(getProficiencia());
-		else if(getPericia2() == "Intuição")
+		else if (getPericia2() == "Intuição")
 			setIntuicao(getProficiencia());
-		else if(getPericia2() == "Investigação")
+		else if (getPericia2() == "Investigação")
 			setInvestigacao(getProficiencia());
-		else if(getPericia2() == "Lidar com animais")
+		else if (getPericia2() == "Lidar com animais")
 			setLidarAnimais(getProficiencia());
-		else if(getPericia2() == "Meidicina")
+		else if (getPericia2() == "Meidicina")
 			setMedicina(getProficiencia());
-		else if(getPericia2() == "Natureza")
+		else if (getPericia2() == "Natureza")
 			setNatureza(getProficiencia());
-		else if(getPericia2() == "Percepção")
+		else if (getPericia2() == "Percepção")
 			setPercepcao(getProficiencia());
-		else if(getPericia2() == "Persuasão")
+		else if (getPericia2() == "Persuasão")
 			setPersuasao(getProficiencia());
-		else if(getPericia2() == "Prestidigitação")
+		else if (getPericia2() == "Prestidigitação")
 			setPrestidigitacao(getProficiencia());
-		else if(getPericia2() == "Religião")
+		else if (getPericia2() == "Religião")
 			setReligiao(getProficiencia());
-		else if(getPericia2() == "Sobrevivencia")
+		else if (getPericia2() == "Sobrevivencia")
 			setSobrevivencia(getProficiencia());
-		
-		
-		
+
 		if (getPericia3() == "Acrobacia")
 			setAcrobacia(getProficiencia());
-		else if(getPericia3() == "Arcanismo")
+		else if (getPericia3() == "Arcanismo")
 			setArcanismo(getProficiencia());
-		else if(getPericia3() == "Atletismo")
+		else if (getPericia3() == "Atletismo")
 			setAtletismo(getProficiencia());
-		else if(getPericia3() == "Atuação")
+		else if (getPericia3() == "Atuação")
 			setAtuacao(getProficiencia());
-		else if(getPericia3() == "Blefar")
+		else if (getPericia3() == "Blefar")
 			setBlefar(getProficiencia());
-		else if(getPericia3() == "Furtividade")
+		else if (getPericia3() == "Furtividade")
 			setFurtividade(getProficiencia());
-		else if(getPericia3() == "Historia")
+		else if (getPericia3() == "Historia")
 			setHistoria(getProficiencia());
-		else if(getPericia3() == "Intimidação")
+		else if (getPericia3() == "Intimidação")
 			setIntimidacao(getProficiencia());
-		else if(getPericia3() == "Intuição")
+		else if (getPericia3() == "Intuição")
 			setIntuicao(getProficiencia());
-		else if(getPericia3() == "Investigação")
+		else if (getPericia3() == "Investigação")
 			setInvestigacao(getProficiencia());
-		else if(getPericia3() == "Lidar com animais")
+		else if (getPericia3() == "Lidar com animais")
 			setLidarAnimais(getProficiencia());
-		else if(getPericia3() == "Meidicina")
+		else if (getPericia3() == "Meidicina")
 			setMedicina(getProficiencia());
-		else if(getPericia3() == "Natureza")
+		else if (getPericia3() == "Natureza")
 			setNatureza(getProficiencia());
-		else if(getPericia3() == "Percepção")
+		else if (getPericia3() == "Percepção")
 			setPercepcao(getProficiencia());
-		else if(getPericia3() == "Persuasão")
+		else if (getPericia3() == "Persuasão")
 			setPersuasao(getProficiencia());
-		else if(getPericia3() == "Prestidigitação")
+		else if (getPericia3() == "Prestidigitação")
 			setPrestidigitacao(getProficiencia());
-		else if(getPericia3() == "Religião")
+		else if (getPericia3() == "Religião")
 			setReligiao(getProficiencia());
-		else if(getPericia3() == "Sobrevivencia")
+		else if (getPericia3() == "Sobrevivencia")
 			setSobrevivencia(getProficiencia());
-		
-		
-		
+
 		if (getPericia4() == "Acrobacia")
 			setAcrobacia(getProficiencia());
-		else if(getPericia4() == "Arcanismo")
+		else if (getPericia4() == "Arcanismo")
 			setArcanismo(getProficiencia());
-		else if(getPericia4() == "Atletismo")
+		else if (getPericia4() == "Atletismo")
 			setAtletismo(getProficiencia());
-		else if(getPericia4() == "Atuação")
+		else if (getPericia4() == "Atuação")
 			setAtuacao(getProficiencia());
-		else if(getPericia4() == "Blefar")
+		else if (getPericia4() == "Blefar")
 			setBlefar(getProficiencia());
-		else if(getPericia4() == "Furtividade")
+		else if (getPericia4() == "Furtividade")
 			setFurtividade(getProficiencia());
-		else if(getPericia4() == "Historia")
+		else if (getPericia4() == "Historia")
 			setHistoria(getProficiencia());
-		else if(getPericia4() == "Intimidação")
+		else if (getPericia4() == "Intimidação")
 			setIntimidacao(getProficiencia());
-		else if(getPericia4() == "Intuição")
+		else if (getPericia4() == "Intuição")
 			setIntuicao(getProficiencia());
-		else if(getPericia4() == "Investigação")
+		else if (getPericia4() == "Investigação")
 			setInvestigacao(getProficiencia());
-		else if(getPericia4() == "Lidar com animais")
+		else if (getPericia4() == "Lidar com animais")
 			setLidarAnimais(getProficiencia());
-		else if(getPericia4() == "Meidicina")
+		else if (getPericia4() == "Meidicina")
 			setMedicina(getProficiencia());
-		else if(getPericia4() == "Natureza")
+		else if (getPericia4() == "Natureza")
 			setNatureza(getProficiencia());
-		else if(getPericia4() == "Percepção")
+		else if (getPericia4() == "Percepção")
 			setPercepcao(getProficiencia());
-		else if(getPericia4() == "Persuasão")
+		else if (getPericia4() == "Persuasão")
 			setPersuasao(getProficiencia());
-		else if(getPericia4() == "Prestidigitação")
+		else if (getPericia4() == "Prestidigitação")
 			setPrestidigitacao(getProficiencia());
-		else if(getPericia4() == "Religião")
+		else if (getPericia4() == "Religião")
 			setReligiao(getProficiencia());
-		else if(getPericia4() == "Sobrevivencia")
+		else if (getPericia4() == "Sobrevivencia")
 			setSobrevivencia(getProficiencia());
 	}
 
@@ -327,43 +323,13 @@ public class PericiasPersonagem extends TesteDeResistencia {
 	}
 
 	public String toStringPericias() {
-		return 	"PERICIAS%n"
-				+"%nAcrobacia: "
-				+ getAcrobacia()
-				+"%nArcanismo: "
-				+ getArcanismo()
-				+ "%nAtletismo: "
-				+ getAtletismo()
-				+ "%nAtuação: "
-				+ getAtuacao()
-				+ "%nBlefar: "
-				+ getBlefar()
-				+ "%nFurtividade: "
-				+ getFurtividade()
-				+ "%nHistoria: "
-				+ getHistoria()
-				+ "%nIntimidação: "
-				+ getIntimidacao()
-				+ "%nIntuição: "
-				+ getIntuicao()
-				+ "%nInvestigação: "
-				+ getInvestigacao()
-				+ "%nLidar com animais: "
-				+ getLidarAnimais()
-				+ "%nMedicina: "
-				+ getMedicina()
-				+ "%nNatureza: "
-				+ getNatureza()
-				+ "%nPercepção: "
-				+ getPercepcao()
-				+ "%nPersuasão: "
-				+ getPersuasao()
-				+ "%nPrestidigitação: "
-				+ getPrestidigitacao()
-				+ "%nReligião: "
-				+ getReligiao()
-				+ "%nSobrevivencia: "
-				+ getSobrevivencia();
+		return "PERICIAS%n" + "%nAcrobacia: " + getAcrobacia() + "%nArcanismo: " + getArcanismo() + "%nAtletismo: "
+				+ getAtletismo() + "%nAtuação: " + getAtuacao() + "%nBlefar: " + getBlefar() + "%nFurtividade: "
+				+ getFurtividade() + "%nHistoria: " + getHistoria() + "%nIntimidação: " + getIntimidacao()
+				+ "%nIntuição: " + getIntuicao() + "%nInvestigação: " + getInvestigacao() + "%nLidar com animais: "
+				+ getLidarAnimais() + "%nMedicina: " + getMedicina() + "%nNatureza: " + getNatureza() + "%nPercepção: "
+				+ getPercepcao() + "%nPersuasão: " + getPersuasao() + "%nPrestidigitação: " + getPrestidigitacao()
+				+ "%nReligião: " + getReligiao() + "%nSobrevivencia: " + getSobrevivencia();
 	}
 
 }

@@ -5,6 +5,7 @@ public class Modificador extends ClassePersonagem {
 	private int Mforca, Mdestreza, Mconstituicao, Minteligencia, Msabedoria, Mcarisma;
 
 	public void addModificador() {
+		
 
 		if (getForca() == 1)
 			this.Mforca = -5;

@@ -32,22 +32,76 @@ import raça.HalflingRobusto;
 import raça.Humano;
 
 public class ViewController {
+
+	@FXML
+	private Label lblAcrobacia;
 	
+	@FXML
+	private Label lblArcanismo;
+	
+	@FXML 
+	private Label lblAtletismo;
+	
+	@FXML 
+	private Label lblAtuacao;
+	
+	@FXML 
+	private Label lblBlefar;
+	
+	@FXML
+	private Label lblFurtividade;
+	
+	@FXML
+	private Label lblHistoria;
+	
+	@FXML
+	private Label lblIntimidacao;
+	
+	@FXML
+	private Label lblIntuicao;
+	
+	@FXML
+	private Label lblInvestigacao;
+	
+	@FXML
+	private Label lblLidarAnimais;
+	
+	@FXML
+	private Label lblMedicina;
+	
+	@FXML
+	private Label lblNatureza;
+	
+	@FXML
+	private Label lblPercepcao;
+	
+	@FXML
+	private Label lblPersuasao;
+	
+	@FXML
+	private Label lblPrestidigitacao;
+	
+	@FXML
+	private Label lblReligiao;
+	
+	@FXML
+	private Label lblSobrevivencia;
+
 	@FXML
 	private Label lblInfoResistencia;
-	
+
 	@FXML
 	private Label lblVantagemResistencia1;
-	
+
 	@FXML
 	private Label lblVantagemResistencia2;
-	
+
 	@FXML
 	private Label lblResistenciaFor;
 
 	@FXML
 	private Label lblResistenciaDes;
-	
+
 	@FXML
 	private Label lblResistenciaCon;
 
@@ -56,10 +110,10 @@ public class ViewController {
 
 	@FXML
 	private Label lblResistenciaSab;
-	
+
 	@FXML
 	private Label lblResistenciaCar;
-	
+
 	@FXML
 	private Label lblProficiencia;
 
@@ -520,8 +574,27 @@ public class ViewController {
 			personagem.setNivel(Integer.parseInt(txtNivel.getText()));
 			
 			personagem.att();
-			
-			lblProficiencia.setText(String.format("%d" , personagem.getProficiencia()));
+
+			lblAcrobacia.setText(String.format("%d", personagem.getAcrobacia()));
+			lblArcanismo.setText(String.format("%d", personagem.getArcanismo()));
+			lblAtletismo.setText(String.format("%d", personagem.getAtletismo()));
+			lblAtuacao.setText(String.format("%d", personagem.getAtuacao()));
+			lblBlefar.setText(String.format("%d", personagem.getBlefar()));
+			lblFurtividade.setText(String.format("%d", personagem.getFurtividade()));
+			lblHistoria.setText(String.format("%d", personagem.getHistoria()));
+			lblIntimidacao.setText(String.format("%d", personagem.getIntimidacao()));
+			lblIntuicao.setText(String.format("%d", personagem.getIntuicao()));
+			lblInvestigacao.setText(String.format("%d", personagem.getInvestigacao()));
+			lblLidarAnimais.setText(String.format("%d", personagem.getLidarAnimais()));
+			lblMedicina.setText(String.format("%d", personagem.getMedicina()));
+			lblNatureza.setText(String.format("%d", personagem.getNatureza()));
+			lblPercepcao.setText(String.format("%d", personagem.getPercepcao()));
+			lblPersuasao.setText(String.format("%d", personagem.getPersuasao()));
+			lblPrestidigitacao.setText(String.format("%d", personagem.getPrestidigitacao()));
+			lblReligiao.setText(String.format("%d", personagem.getReligiao()));
+			lblSobrevivencia.setText(String.format("%d", personagem.getSobrevivencia()));
+
+			lblProficiencia.setText(String.format("%d", personagem.getProficiencia()));
 
 			lblFor.setText(String.format("%d", personagem.getForca()));
 			lblDes.setText(String.format("%d", personagem.getDestreza()));
@@ -536,7 +609,7 @@ public class ViewController {
 			lblMInt.setText(personagem.getMinteligencialbl());
 			lblMSab.setText(personagem.getMsabedorialbl());
 			lblMCar.setText(personagem.getMcarismalbl());
-			
+
 			lblResistenciaFor.setText(String.format("%d", personagem.getResistenciaForca()));
 			lblResistenciaDes.setText(String.format("%d", personagem.getResistenciaDestreza()));
 			lblResistenciaCon.setText(String.format("%d", personagem.getResistenciaConstituicao()));
@@ -558,7 +631,6 @@ public class ViewController {
 			}
 
 			lblHp.setText(String.format("%d", personagem.getHp()));
-
 		} catch (Exception e) {
 			System.out.println("ERRO");
 		}
