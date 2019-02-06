@@ -291,7 +291,7 @@ public class ViewController {
 	private Personagem personagem = new Personagem();
 
 	@FXML
-	public void onBtAnaoColinaAction() {
+	protected void onBtAnaoColinaAction() {
 		try {
 			AnaoColina anaoColina = new AnaoColina();
 
@@ -303,8 +303,8 @@ public class ViewController {
 			lblInfo6.setText("");
 
 			lblRacaEscolha.setText(anaoColina.getNome());
-			lblInfo1.setText("CON: +2");
-			lblInfo2.setText("SAB: +1");
+			lblInfo1.setText("CON: +" + anaoColina.getConstituicao());
+			lblInfo2.setText("SAB: +" + anaoColina.getSabedoria());
 
 			personagem.addRaca(anaoColina.getNome(), anaoColina.getForca(), anaoColina.getDestreza(),
 					anaoColina.getConstituicao(), anaoColina.getInteligencia(), anaoColina.getSabedoria(),
@@ -316,7 +316,7 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtAnaoMontanhaAction() {
+	protected void onBtAnaoMontanhaAction() {
 		try {
 			AnaoMontanha anaoMontanha = new AnaoMontanha();
 
@@ -327,9 +327,9 @@ public class ViewController {
 			lblInfo5.setText("");
 			lblInfo6.setText("");
 
-			lblRacaEscolha.setText("Anão da Montanha");
-			lblInfo1.setText("CON: +2");
-			lblInfo2.setText("FOR: +2");
+			lblRacaEscolha.setText(anaoMontanha.getNome());
+			lblInfo1.setText("CON: +" + anaoMontanha.getConstituicao());
+			lblInfo2.setText("FOR: +" + anaoMontanha.getForca());
 
 			personagem.addRaca(anaoMontanha.getNome(), anaoMontanha.getForca(), anaoMontanha.getDestreza(),
 					anaoMontanha.getConstituicao(), anaoMontanha.getInteligencia(), anaoMontanha.getSabedoria(),
@@ -340,7 +340,7 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtDraconatoAction() {
+	protected void onBtDraconatoAction() {
 		try {
 			Draconato draconato = new Draconato();
 
@@ -351,9 +351,9 @@ public class ViewController {
 			lblInfo5.setText("");
 			lblInfo6.setText("");
 
-			lblRacaEscolha.setText("Draconato");
-			lblInfo1.setText("FOR: +2");
-			lblInfo2.setText("CAR: +1");
+			lblRacaEscolha.setText(draconato.getNome());
+			lblInfo1.setText("FOR: +" + draconato.getForca());
+			lblInfo2.setText("CAR: +" + draconato.getCarisma());
 
 			personagem.addRaca(draconato.getNome(), draconato.getForca(), draconato.getDestreza(),
 					draconato.getConstituicao(), draconato.getInteligencia(), draconato.getSabedoria(),
@@ -365,7 +365,7 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtElfoAltoAction() {
+	protected void onBtElfoAltoAction() {
 		try {
 			ElfoAlto elfoAlto = new ElfoAlto();
 
@@ -376,9 +376,9 @@ public class ViewController {
 			lblInfo5.setText("");
 			lblInfo6.setText("");
 
-			lblRacaEscolha.setText("Elfo Alto");
-			lblInfo1.setText("DES: +2");
-			lblInfo2.setText("INT: +1");
+			lblRacaEscolha.setText(elfoAlto.getNome());
+			lblInfo1.setText("DES: +" + elfoAlto.getDestreza());
+			lblInfo2.setText("INT: +" + elfoAlto.getInteligencia());
 
 			personagem.addRaca(elfoAlto.getNome(), elfoAlto.getForca(), elfoAlto.getDestreza(),
 					elfoAlto.getConstituicao(), elfoAlto.getInteligencia(), elfoAlto.getSabedoria(),
@@ -390,7 +390,7 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtElfoFlorestaAction() {
+	protected void onBtElfoFlorestaAction() {
 		try {
 			ElfoFloresta elfoFloresta = new ElfoFloresta();
 
@@ -401,9 +401,9 @@ public class ViewController {
 			lblInfo5.setText("");
 			lblInfo6.setText("");
 
-			lblRacaEscolha.setText("Elfo da Floresta");
-			lblInfo1.setText("DES: +2");
-			lblInfo2.setText("SAB: +1");
+			lblRacaEscolha.setText(elfoFloresta.getNome());
+			lblInfo1.setText("DES: +" + elfoFloresta.getDestreza());
+			lblInfo2.setText("SAB: +" + elfoFloresta.getSabedoria());
 
 			personagem.addRaca(elfoFloresta.getNome(), elfoFloresta.getForca(), elfoFloresta.getDestreza(),
 					elfoFloresta.getConstituicao(), elfoFloresta.getInteligencia(), elfoFloresta.getSabedoria(),
@@ -415,7 +415,7 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtElfoNegroAction() {
+	protected void onBtElfoNegroAction() {
 		try {
 			ElfoNegro elfoNegro = new ElfoNegro();
 
@@ -426,9 +426,9 @@ public class ViewController {
 			lblInfo5.setText("");
 			lblInfo6.setText("");
 
-			lblRacaEscolha.setText("Elfo Negro");
-			lblInfo1.setText("DES: +2");
-			lblInfo2.setText("CAR: +1");
+			lblRacaEscolha.setText(elfoNegro.getNome());
+			lblInfo1.setText("DES: +" + elfoNegro.getDestreza());
+			lblInfo2.setText("CAR: +" + elfoNegro.getCarisma());
 
 			personagem.addRaca(elfoNegro.getNome(), elfoNegro.getForca(), elfoNegro.getDestreza(),
 					elfoNegro.getConstituicao(), elfoNegro.getInteligencia(), elfoNegro.getSabedoria(),
@@ -440,7 +440,7 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtGnomoFlorestaAction() {
+	protected void onBtGnomoFlorestaAction() {
 		try {
 			GnomoFloresta gnomoFloresta = new GnomoFloresta();
 
@@ -451,9 +451,9 @@ public class ViewController {
 			lblInfo5.setText("");
 			lblInfo6.setText("");
 
-			lblRacaEscolha.setText("Gnomo da Floresta");
-			lblInfo1.setText("INT: +2");
-			lblInfo2.setText("DES: +1");
+			lblRacaEscolha.setText(gnomoFloresta.getNome());
+			lblInfo1.setText("INT: +" + gnomoFloresta.getInteligencia());
+			lblInfo2.setText("DES: +" + gnomoFloresta.getDestreza());
 
 			personagem.addRaca(gnomoFloresta.getNome(), gnomoFloresta.getForca(), gnomoFloresta.getDestreza(),
 					gnomoFloresta.getConstituicao(), gnomoFloresta.getInteligencia(), gnomoFloresta.getSabedoria(),
@@ -465,7 +465,7 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtGnomoPedraAction() {
+	protected void onBtGnomoPedraAction() {
 		try {
 			GnomoPedra gnomoPedra = new GnomoPedra();
 
@@ -476,9 +476,9 @@ public class ViewController {
 			lblInfo5.setText("");
 			lblInfo6.setText("");
 
-			lblRacaEscolha.setText("Gnomo da Pedra");
-			lblInfo1.setText("INT: +2");
-			lblInfo2.setText("CON: +1");
+			lblRacaEscolha.setText(gnomoPedra.getNome());
+			lblInfo1.setText("INT: +" + gnomoPedra.getInteligencia());
+			lblInfo2.setText("CON: +" + gnomoPedra.getConstituicao());
 
 			personagem.addRaca(gnomoPedra.getNome(), gnomoPedra.getForca(), gnomoPedra.getDestreza(),
 					gnomoPedra.getConstituicao(), gnomoPedra.getInteligencia(), gnomoPedra.getSabedoria(),
@@ -490,7 +490,7 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtHalflingLeveAction() {
+	protected void onBtHalflingLeveAction() {
 		try {
 			HalflingLeve halflingLeve = new HalflingLeve();
 
@@ -501,9 +501,9 @@ public class ViewController {
 			lblInfo5.setText("");
 			lblInfo6.setText("");
 
-			lblRacaEscolha.setText("Halfling Pés Leves");
-			lblInfo1.setText("DES: +2");
-			lblInfo2.setText("CAR: +1");
+			lblRacaEscolha.setText(halflingLeve.getNome());
+			lblInfo1.setText("DES: +" + halflingLeve.getDestreza());
+			lblInfo2.setText("CAR: +" + halflingLeve.getCarisma());
 
 			personagem.addRaca(halflingLeve.getNome(), halflingLeve.getForca(), halflingLeve.getDestreza(),
 					halflingLeve.getConstituicao(), halflingLeve.getInteligencia(), halflingLeve.getSabedoria(),
@@ -515,7 +515,7 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtHalflingRobustoAction() {
+	protected void onBtHalflingRobustoAction() {
 		try {
 			HalflingRobusto halflingRobusto = new HalflingRobusto();
 
@@ -526,9 +526,9 @@ public class ViewController {
 			lblInfo5.setText("");
 			lblInfo6.setText("");
 
-			lblRacaEscolha.setText("Halfling Robusto");
-			lblInfo1.setText("DES: +2");
-			lblInfo2.setText("CON: +1");
+			lblRacaEscolha.setText(halflingRobusto.getNome());
+			lblInfo1.setText("DES: +" + halflingRobusto.getDestreza());
+			lblInfo2.setText("CON: +" + halflingRobusto.getConstituicao());
 
 			personagem.addRaca(halflingRobusto.getNome(), halflingRobusto.getForca(), halflingRobusto.getDestreza(),
 					halflingRobusto.getConstituicao(), halflingRobusto.getInteligencia(),
@@ -540,17 +540,17 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtHumanoAction() {
+	protected void onBtHumanoAction() {
 		try {
 			Humano humano = new Humano();
 
-			lblRacaEscolha.setText("Humano");
-			lblInfo1.setText("FOR: +1");
-			lblInfo2.setText("DES: +1");
-			lblInfo3.setText("CON: +1");
-			lblInfo4.setText("INT: +1");
-			lblInfo5.setText("SAB: +1");
-			lblInfo6.setText("CAR: +1");
+			lblRacaEscolha.setText(humano.getNome());
+			lblInfo1.setText("FOR: +" + humano.getForca());
+			lblInfo2.setText("DES: +" + humano.getDestreza());
+			lblInfo3.setText("CON: +" + humano.getConstituicao());
+			lblInfo4.setText("INT: +" + humano.getInteligencia());
+			lblInfo5.setText("SAB: +" + humano.getSabedoria());
+			lblInfo6.setText("CAR: +" + humano.getCarisma());
 
 			personagem.addRaca(humano.getNome(), humano.getForca(), humano.getDestreza(), humano.getConstituicao(),
 					humano.getInteligencia(), humano.getSabedoria(), humano.getCarisma());
@@ -637,10 +637,10 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtBarbaroAction() {
+	protected void onBtBarbaroAction() {
 		Barbaro barbaro = new Barbaro();
 		lblClasseEscolha.setText("HP: 1D" + barbaro.getVidaLvl() + " por nivel");
-		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		addLblVantagensTesteResistencia();
 		lblVantagemResistencia1.setText("Força");
 		lblVantagemResistencia2.setText("Constituição");
 
@@ -648,10 +648,10 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtBardoAction() {
+	protected void onBtBardoAction() {
 		Bardo bardo = new Bardo();
 		lblClasseEscolha.setText("HP: 1D" + bardo.getVidaLvl() + " por nivel");
-		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		addLblVantagensTesteResistencia();
 		lblVantagemResistencia1.setText("Destreza");
 		lblVantagemResistencia2.setText("Carisma");
 
@@ -659,10 +659,10 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtBruxoAction() {
+	protected void onBtBruxoAction() {
 		Bruxo bruxo = new Bruxo();
 		lblClasseEscolha.setText("HP: 1D" + bruxo.getVidaLvl() + " por nivel");
-		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		addLblVantagensTesteResistencia();
 		lblVantagemResistencia1.setText("Sabedoria");
 		lblVantagemResistencia2.setText("Carisma");
 
@@ -670,10 +670,10 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtClerigoAction() {
+	protected void onBtClerigoAction() {
 		Clerigo clerigo = new Clerigo();
 		lblClasseEscolha.setText("HP: 1D" + clerigo.getVidaLvl() + " por nivel");
-		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		addLblVantagensTesteResistencia();
 		lblVantagemResistencia1.setText("Sabedoria");
 		lblVantagemResistencia2.setText("Carisma");
 
@@ -681,10 +681,10 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtDruidaAction() {
+	protected void onBtDruidaAction() {
 		Druida druida = new Druida();
 		lblClasseEscolha.setText("HP: 1D" + druida.getVidaLvl() + " por nivel");
-		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		addLblVantagensTesteResistencia();
 		lblVantagemResistencia1.setText("Inteligencia");
 		lblVantagemResistencia2.setText("Sabedoria");
 
@@ -692,10 +692,10 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtFeiticeiroAction() {
+	protected void onBtFeiticeiroAction() {
 		Feiticeiro feiticeiro = new Feiticeiro();
 		lblClasseEscolha.setText("HP: 1D" + feiticeiro.getVidaLvl() + " por nivel");
-		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		addLblVantagensTesteResistencia();
 		lblVantagemResistencia1.setText("Constituição");
 		lblVantagemResistencia2.setText("Carisma");
 
@@ -703,10 +703,10 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtGuerreiroAction() {
+	protected void onBtGuerreiroAction() {
 		Guerreiro guerreiro = new Guerreiro();
 		lblClasseEscolha.setText("HP: 1D" + guerreiro.getVidaLvl() + " por nivel");
-		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		addLblVantagensTesteResistencia();
 		lblVantagemResistencia1.setText("Força");
 		lblVantagemResistencia2.setText("Constituição");
 
@@ -714,10 +714,10 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtLadinoAction() {
+	protected void onBtLadinoAction() {
 		Ladino ladino = new Ladino();
 		lblClasseEscolha.setText("HP: 1D" + ladino.getVidaLvl() + " por nivel");
-		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		addLblVantagensTesteResistencia();
 		lblVantagemResistencia1.setText("Destreza");
 		lblVantagemResistencia2.setText("Inteligencia");
 
@@ -725,10 +725,10 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtMagoAction() {
+	protected void onBtMagoAction() {
 		Mago mago = new Mago();
 		lblClasseEscolha.setText("HP: 1D" + mago.getVidaLvl() + " por nivel");
-		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		addLblVantagensTesteResistencia();
 		lblVantagemResistencia1.setText("Inteligencia");
 		lblVantagemResistencia2.setText("Sabedoria");
 
@@ -736,10 +736,10 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtMongeAction() {
+	protected void onBtMongeAction() {
 		Monge monge = new Monge();
 		lblClasseEscolha.setText("HP: 1D" + monge.getVidaLvl() + " por nivel");
-		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		addLblVantagensTesteResistencia();
 		lblVantagemResistencia1.setText("Força");
 		lblVantagemResistencia2.setText("Destreza");
 
@@ -747,10 +747,10 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtPaladinoAction() {
+	protected void onBtPaladinoAction() {
 		Paladino paladino = new Paladino();
 		lblClasseEscolha.setText("HP: 1D" + paladino.getVidaLvl() + " por nivel");
-		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		addLblVantagensTesteResistencia();
 		lblVantagemResistencia1.setText("Sabedoria");
 		lblVantagemResistencia2.setText("Carisma");
 
@@ -758,14 +758,19 @@ public class ViewController {
 	}
 
 	@FXML
-	public void onBtPatrulheiroAction() {
+	protected void onBtPatrulheiroAction() {
 		Patrulheiro patrulheiro = new Patrulheiro();
 		lblClasseEscolha.setText("HP: 1D" + patrulheiro.getVidaLvl() + " por nivel");
-		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
+		addLblVantagensTesteResistencia();
 		lblVantagemResistencia1.setText("Força");
 		lblVantagemResistencia2.setText("Destreza");
 
 		personagem.addClasse(patrulheiro.getNome(), patrulheiro.getVidaLvl());
+	}
+	
+	@FXML
+	protected void addLblVantagensTesteResistencia() {
+		lblInfoResistencia.setText("VANTAGENS EM TESTE DE RESISTENCIA:");
 	}
 
 }

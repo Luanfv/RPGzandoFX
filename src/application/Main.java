@@ -13,9 +13,11 @@ public class Main extends Application {
 	public void start(Stage stage) {
 		try {
 			Parent parent = FXMLLoader.load(getClass().getResource("/gui/View.fxml"));
+			stage.setTitle("Criador de fichas RPG");
 			Scene scene = new Scene(parent);
 			stage.setScene(scene);
 			stage.show();
+			stage.setResizable(false);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
